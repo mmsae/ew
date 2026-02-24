@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easyWealth Website Presentation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 1. This ensures images have no tiny gap at the bottom */
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            /* This ensures the image never stretches wider than 1367px */
+            max-width: 1367px; 
+        }
+
+        /* 2. Set the wrapper to your EXACT image width */
+        .main-wrapper {
+            max-width: 1367px; 
+            margin: 0 auto; /* This centers the design on the screen */
+            background-color: #ffffff;
+        }
+
+        /* 3. Background color for the sides of the screen */
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Note (Visible on all screens) -->
+<div class="alert alert-info text-center m-0 rounded-0 border-0" role="alert">
+        <strong>Note:</strong> Best viewed on a computer screen.
+    </div>
+
+    <!-- Image Container -->
+    <div class="container-fluid p-0 main-wrapper">
+        <div class="row g-0"> <!-- All slices MUST stay inside this row -->
+            
+            <!-- Slice 1 -->
+            <div class="col-12 p-0">
+                <img src="images/00_NavMenu.jpg" alt="Slice 1" usemap="#Map">
+                <map name="Map">
+                  <area shape="rect" coords="820,45,881,65" href="about.html">
+                  <area shape="rect" coords="885,45,964,66" href="whatweoffer.html">
+                  <area shape="rect" coords="971,47,1052,68" href="partnerwithus.html">
+                  <area shape="rect" coords="1055,47,1092,67" href="blog.html">
+                  <area shape="rect" coords="1094,46,1135,68" href="faqs.html">
+                  <area shape="rect" coords="1138,45,1203,68" href="contactus.html">
+                </map>
+          </div>
+
+            <!-- Slice 2 -->
+          <div class="col-12 p-0">
+                <img src="images/01_Page 1-100.jpg" alt="Slice 2" usemap="#Map3">
+                <map name="Map3">
+                  <area shape="rect" coords="911,1074,1121,1102" href="privacy.html">
+                </map>
+            </div>
+
+            <!-- Slice 3 -->
+          <div class="col-12 p-0">
+                <img src="images/02_Page 2-100.jpg" alt="Slice 3" usemap="#Map4">
+                <map name="Map4"><area shape="rect" coords="1024,661,1203,704" href="#" data-bs-toggle="modal" data-bs-target="#designPopup">
+                  <area shape="rect" coords="588,659,767,702" href="#" data-bs-toggle="modal" data-bs-target="#designPopup">
+                  <area shape="rect" coords="734,938,938,961" href="#" data-bs-toggle="modal" data-bs-target="#riskPopup">
+                </map>
+          </div>
+
+            <!-- Slice 4 -->
+          <div class="col-12 p-0">
+                <img src="images/03_Page 3-100.jpg" alt="Slice 4">
+          </div>
+
+            <!-- Slice 5 -->
+            <div class="col-12 p-0">
+                <img src="images/05_Page 5-100.jpg" alt="Slice 5" usemap="#Map5">
+                <map name="Map5">
+                  <area shape="rect" coords="782,889,899,918" href="partnerwithus.html">
+                  <area shape="rect" coords="1164,813,1334,917" href="partnerwithus.html">
+                </map>
+            </div>
+
+            <!-- Slice 6 -->
+            <div class="col-12 p-0">
+                <img src="images/06_Page 6-100.jpg" alt="Slice 6">
+            </div>
+
+            <!-- Slice 7 -->
+            <div class="col-12 p-0">
+              <img src="images/04_Page 4-100.jpg" alt="Slice 7" usemap="#Map6">
+              <map name="Map6">
+                <area shape="rect" coords="49,289,302,333" href="#" data-bs-toggle="modal" data-bs-target="#designPopup">
+              </map>
+            </div>
+
+            <!-- Slice 8 -->
+            <div class="col-12 p-0">
+              <img src="images/07_Page 7-100.jpg" alt="Slice 8" usemap="#Map7">
+              <map name="Map7">
+                <area shape="rect" coords="104,1343,1258,1726" href="blog.html">
+              </map>
+            </div>
+
+            <!-- Slice 9 -->
+          <div class="col-12 p-0"> <a href="#"><img src="images/00_Footer.jpg" alt="Slice 9" usemap="#Map2">
+              <map name="Map2">
+                <area shape="rect" coords="554,138,626,160" href="about.html">
+                <area shape="rect" coords="629,137,725,160" href="whatweoffer.html">
+                <area shape="rect" coords="731,136,834,162" href="partnerwithus.html">
+                <area shape="rect" coords="837,137,884,160" href="blog.html">
+                <area shape="rect" coords="887,131,938,162" href="faqs.html">
+                <area shape="rect" coords="942,128,1021,163" href="contactus.html">
+                <area shape="rect" coords="1026,138,1176,170" href="privacy.html">
+                <area shape="rect" coords="1181,131,1309,168" href="#">
+                <area shape="rect" coords="1058,272,1136,291" href="disclaimer.html">
+              </map>
+          </a>
+            </div>
+
+        </div> <!-- End of Row -->
+    </div> <!-- End of Container -->
+
+    <!-- Bootstrap JS (Optional, for hotspots or interactive parts later) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+	
+	
+	<!-- Register Your Interest Popup -->
+<div class="modal fade" id="designPopup" tabindex="-1" aria-hidden="true">
+  <!-- We removed 'modal-xl' and added 'width: fit-content' so the box snaps to the image size -->
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 95%; width: fit-content;">
+    <div class="modal-content border-0 bg-transparent">
+      
+      <!-- Close Button -->
+      <div class="text-end mb-2">
+        <button type="button" class="btn btn-light btn-sm shadow-sm" data-bs-dismiss="modal">Close [X]</button>
+      </div>
+
+      <!-- Popup Image Container -->
+      <div class="modal-body p-0 text-center">
+        <img src="images/Poup - Register Interest-100.jpg" 
+             class="img-fluid shadow-lg" 
+             alt="Popup Content" 
+             style="max-height: 85vh; width: auto; display: block; margin: 0 auto; border-radius: 4px;">
+      </div>
+
+    </div>
+  </div>
+</div>
+	
+	
+
+	<!-- Risk Popup -->
+<div class="modal fade" id="riskPopup" tabindex="-1" aria-hidden="true">
+  <!-- We removed 'modal-xl' and added 'width: fit-content' so the box snaps to the image size -->
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 95%; width: fit-content;">
+    <div class="modal-content border-0 bg-transparent">
+      
+      <!-- Close Button -->
+      <div class="text-end mb-2">
+        <button type="button" class="btn btn-light btn-sm shadow-sm" data-bs-dismiss="modal">Close [X]</button>
+      </div>
+
+      <!-- Popup Image Container -->
+      <div class="modal-body p-0 text-center">
+        <img src="images/Popup - Risks-100.jpg" 
+             class="img-fluid shadow-lg" 
+             alt="Popup Content" 
+             style="max-height: 85vh; width: auto; display: block; margin: 0 auto; border-radius: 4px;">
+      </div>
+
+    </div>
+  </div>
+</div>
+	
+	
+</html>
