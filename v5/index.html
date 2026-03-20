@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you on a billion-dollar track? | easySuccess.com</title>
+    <style>
+        :root {
+            --orange: #FF8800;
+            --gray: #808080;
+            --light-gray: #f4f4f4;
+            --black: #000000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 5px solid var(--orange);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            color: var(--orange);
+            margin: 0;
+            font-size: 2.2em;
+            text-transform: uppercase;
+        }
+
+        .section-box {
+            border: 1px solid var(--gray);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            background: #fff;
+        }
+
+        .section-title {
+            background-color: var(--orange);
+            color: white;
+            padding: 12px;
+            margin: -25px -25px 20px -25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .income-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--gray);
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        .question-block {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .question-text {
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.1em;
+        }
+
+        .option-label {
+            display: block;
+            padding: 12px;
+            margin: 5px 0;
+            border: 1px solid var(--light-gray);
+            cursor: pointer;
+            transition: 0.2s;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+
+        .option-label:hover {
+            background-color: #fff5eb;
+            border-color: var(--orange);
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            accent-color: var(--orange);
+            transform: scale(1.2);
+        }
+
+        .btn {
+            background-color: var(--orange);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .test-mode-badge {
+            font-size: 0.8em;
+            color: gray;
+            font-style: italic;
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="appContainer">
+        <!-- PAGE 1: QUALIFIER -->
+        <div id="qualifierPage">
+            <div class="header">
+                <h1>Are you on a billion-dollar track?</h1>
+                <p style="font-weight: bold; color: var(--gray);">www.easySuccess.com Official Assessment</p>
+            </div>
+
+            <form id="routingForm">
+                <div class="section-box">
+                    <div class="section-title">Personal Details</div>
+                    <div class="grid-info">
+                        <div><label>Full Name</label><input type="text" id="fullName" required></div>
+                        <div><label>Age</label><input type="number" id="age" required></div>
+                        <div><label>City</label><input type="text" id="city" required></div>
+                        <div><label>Post Code</label><input type="text" id="postCode" required></div>
+                        <div><label>Current Occupation</label><input type="text" id="currOcc" required></div>
+                        <div><label>Proposed Occupation</label><input type="text" id="propOcc" required></div>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <label>Last 3 Years Income (£)</label>
+                        <div class="income-grid">
+                            <input type="number" id="incYear1" placeholder="Year 1" required>
+                            <input type="number" id="incYear2" placeholder="Year 2" required>
+                            <input type="number" id="incYear3" placeholder="Year 3" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-box">
+                    <div class="section-title">Qualifier Assessment</div>
+
+                    <div class="question-block">
+                        <span class="question-text">1. Have you calculated what lifestyle you want in 10 years? How much annual income do you need to make in order to give you that lifestyle assuming your home(s) are already owned or if not you need to rent?</span>
+                        <label class="option-label"><input type="radio" name="r1" value="2" data-max="10" required> £5m</label>
+                        <label class="option-label"><input type="radio" name="r1" value="4" data-max="10"> £5m–£20m</label>
+                        <label class="option-label"><input type="radio" name="r1" value="6" data-max="10"> £20m–£50m</label>
+                        <label class="option-label"><input type="radio" name="r1" value="8" data-max="10"> £50m–£100m</label>
+                        <label class="option-label"><input type="radio" name="r1" value="10" data-max="10"> £100m–£1bn</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">2. Which of the following types of industries would you feel most comfortable?</span>
+                        <label class="option-label"><input type="radio" name="r2" value="6" data-max="10" required> Fintec</label>
+                        <label class="option-label"><input type="radio" name="r2" value="7" data-max="10"> Payments/Lending</label>
+                        <label class="option-label"><input type="radio" name="r2" value="9" data-max="10"> Software and AI</label>
+                        <label class="option-label"><input type="radio" name="r2" value="10" data-max="10"> Energy/Scientific</label>
+                        <label class="option-label"><input type="radio" name="r2" value="3" data-max="10"> General Businesses like Restaurants, Accounting, Services, etc</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">3. What does your work life look like?</span>
+                        <label class="option-label"><input type="radio" name="r3" value="0" data-max="0" required> I’m a student</label>
+                        <label class="option-label"><input type="radio" name="r3" value="0" data-max="0"> I’m an employee</label>
+                        <label class="option-label"><input type="radio" name="r3" value="0" data-max="0"> I own a business</label>
+                        <label class="option-label"><input type="radio" name="r3" value="0" data-max="0"> Retired</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">4. If you are a student, which best describes your university and course?</span>
+                        <label class="option-label"><input type="radio" name="r4" value="2" data-max="8" required> Local or regional university</label>
+                        <label class="option-label"><input type="radio" name="r4" value="4" data-max="8"> Recognised national university</label>
+                        <label class="option-label"><input type="radio" name="r4" value="6" data-max="8"> Top national or international university (e.g., Russell Group, Ivy-equivalent, leading technical institutions)</label>
+                        <label class="option-label"><input type="radio" name="r4" value="8" data-max="8"> Globally elite institution and competitive course (e.g., Harvard, Stanford, MIT, Oxford, Cambridge, ETH, top-tier engineering/economics/business programs)</label>
+                        <label class="option-label"><input type="radio" name="r4" value="NA"> Not Applicable</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">5. If you are currently employed, how much do you currently earn per year?</span>
+                        <label class="option-label"><input type="radio" name="r5" value="2" data-max="8" required> Up to $42,000</label>
+                        <label class="option-label"><input type="radio" name="r5" value="4" data-max="8"> Between $43,000 and $60,000</label>
+                        <label class="option-label"><input type="radio" name="r5" value="6" data-max="8"> $61,000–$100,000</label>
+                        <label class="option-label"><input type="radio" name="r5" value="8" data-max="8"> $100,000+</label>
+                        <label class="option-label"><input type="radio" name="r5" value="NA"> Not Applicable</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">6. Do you own a business?</span>
+                        <label class="option-label"><input type="radio" name="r6" value="2" data-max="10" required> No</label>
+                        <label class="option-label"><input type="radio" name="r6" value="4" data-max="10"> I’m employed & have a side-hustle</label>
+                        <label class="option-label"><input type="radio" name="r6" value="6" data-max="10"> Built but never exited</label>
+                        <label class="option-label"><input type="radio" name="r6" value="8" data-max="10"> Yes currently</label>
+                        <label class="option-label"><input type="radio" name="r6" value="9" data-max="10"> Yes modest exit</label>
+                        <label class="option-label"><input type="radio" name="r6" value="10" data-max="10"> Yes currently and also had a significant previous exit</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">7. If you own or previously owned a business, what is/was the annual revenue?</span>
+                        <label class="option-label"><input type="radio" name="r7" value="NA" required> Not applicable</label>
+                        <label class="option-label"><input type="radio" name="r7" value="3" data-max="10"> Pre-revenue</label>
+                        <label class="option-label"><input type="radio" name="r7" value="5" data-max="10"> Under £1m</label>
+                        <label class="option-label"><input type="radio" name="r7" value="8" data-max="10"> £1m – £10m</label>
+                        <label class="option-label"><input type="radio" name="r7" value="10" data-max="10"> £10m+</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">8. How hungry are you to build a serious business now?</span>
+                        <label class="option-label"><input type="radio" name="r8" value="10" data-max="10" required> I already have a serious business</label>
+                        <label class="option-label"><input type="radio" name="r8" value="6" data-max="10"> Plan to launch within the next 6 months</label>
+                        <label class="option-label"><input type="radio" name="r8" value="4" data-max="10"> Plan to launch within the next 12 months</label>
+                        <label class="option-label"><input type="radio" name="r8" value="8" data-max="10"> Ready to launch now</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">9. Would you think in terms of scale beyond your local market?</span>
+                        <label class="option-label"><input type="radio" name="r9" value="2" data-max="8" required> No</label>
+                        <label class="option-label"><input type="radio" name="r9" value="4" data-max="8"> Primarily local</label>
+                        <label class="option-label"><input type="radio" name="r9" value="6" data-max="8"> Regional</label>
+                        <label class="option-label"><input type="radio" name="r9" value="8" data-max="8"> Global from inception</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">10. Capital you could realistically deploy in the next 12 months?</span>
+                        <label class="option-label"><input type="radio" name="r10" value="2" data-max="10" required> Below £10k</label>
+                        <label class="option-label"><input type="radio" name="r10" value="4" data-max="10"> £10k–£100k</label>
+                        <label class="option-label"><input type="radio" name="r10" value="7" data-max="10"> £100k–£1m</label>
+                        <label class="option-label"><input type="radio" name="r10" value="10" data-max="10"> £1m+</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">11. Are you determined to become wealthy for yourself, your family and your loved ones?</span>
+                        <label class="option-label"><input type="radio" name="r11" value="10" data-max="10" required> I have all the knowledge, network and accountability to make this happen</label>
+                        <label class="option-label"><input type="radio" name="r11" value="8" data-max="10"> I would appreciate extra knowledge</label>
+                        <label class="option-label"><input type="radio" name="r11" value="6" data-max="10"> I need knowledge and network</label>
+                        <label class="option-label"><input type="radio" name="r11" value="4" data-max="10"> I need knowledge, network and accountability</label>
+                    </div>
+
+                    <div class="question-block">
+                        <span class="question-text">12. How many hours a week are you happy to work?</span>
+                        <label class="option-label"><input type="radio" name="r12" value="2" data-max="10" required> Up to 20</label>
+                        <label class="option-label"><input type="radio" name="r12" value="4" data-max="10"> 20-30</label>
+                        <label class="option-label"><input type="radio" name="r12" value="7" data-max="10"> 30-60</label>
+                        <label class="option-label"><input type="radio" name="r12" value="10" data-max="10"> 60+</label>
+                    </div>
+
+                    <button type="button" class="btn" onclick="processRouting()">Analyze My Trajectory</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- PAGE 2: ASSESSMENT CONTENT -->
+        <div id="assessmentPage" class="hidden">
+            <div class="header">
+                <h1 id="assessmentTitle">Assessment</h1>
+                <p id="assessmentCandidateLabel"></p>
+            </div>
+            <div id="assessmentQuestions" class="section-box"></div>
+            <button type="button" class="btn" onclick="generateFinalReport()">Generate Final Success Report</button>
+        </div>
+
+        <!-- PAGE 3: FAIL SCREEN -->
+        <div id="failPage" class="hidden">
+            <div class="section-box" style="text-align:center; padding:50px;">
+                <h1 style="color:var(--orange);">Foundational Phase</h1>
+                <p id="failScoreLabel" style="font-weight:bold; background:#eee; padding:10px; display:inline-block;"></p>
+                <p style="margin-top:20px;">Thank you for your interest. Based on your current assessment, your trajectory is currently in a vital preparation phase.</p>
+                <p>We recommend focusing on core professional objectives for 6-12 months before re-evaluating.</p>
+                <button class="btn" onclick="location.reload()" style="width:auto; margin-top:20px;">Restart Assessment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let userData = {};
+        let currentMax = 0;
+        let activeQuestions = [];
+        let currentTrack = "billionaire";
+
+        const billionaireAssessmentData = [
+            ["How ambitious are you?",
+                ["I want stability and comfort", 2],
+                ["I am driven to create outsized impact", 7],
+                ["I aim for financial independence", 4],
+                ["I want to lead in my category", 10]
+            ],
+            ["What best describes your motivation for building extraordinary wealth?",
+                ["Building something meaningful and lasting", 8],
+                ["Recognition and status", 3],
+                ["Using wealth as a tool to solve larger problems", 10],
+                ["Personal freedom and independence", 5]
+            ],
+            ["Are you prepared to work 6 days per week – with a minimum of 60 hours?",
+                ["Only for short burst", 5],
+                ["Absolutely, for as long as required", 10],
+                ["No, would prefer 40 hours", 2]
+            ],
+            ["How do you typically perform during sustained periods of pressure and uncertainty?",
+                ["I manage for short periods", 5],
+                ["I become sharper and more decisive", 10],
+                ["My performance declines", 2],
+                ["I remain effective and focused", 8]
+            ],
+            ["When things don’t go to plan or you experience a setback, what is your typical reaction?",
+                ["I regroup after some time", 5],
+                ["Setbacks increase my determination", 10],
+                ["I find it discouraging", 2],
+                ["I analyse and adjust quickly", 8]
+            ],
+            ["How important is personal development to your long-term success?",
+                ["I consistently invest in growth", 10],
+                ["Not particularly important", 2],
+                ["Somewhat useful", 5]
+            ],
+            ["How would people who work with you describe your energy?",
+                ["Intensely solution-driven and contagious", 10],
+                ["Positive and practical", 6],
+                ["Often sceptical or critical", 3]
+            ],
+            ["How quickly do you learn and apply new concepts?",
+                ["Exceptionally fast and adaptable", 10],
+                ["At an average pace", 5],
+                ["Slowly", 2],
+                ["Quickly", 8]
+            ],
+            ["Similar to chess, how strong is your ability to recognise patterns, think strategically, and build successful solutions?",
+                ["I consistently think in multi-layer strategic horizons", 10],
+                ["I react to immediate moves", 2],
+                ["I design systems with long-term positioning", 8],
+                ["I plan several steps ahead", 6]
+            ],
+            ["How would you describe your ability to identify market gaps and develop businesses with defensible advantages?",
+                ["I spot opportunities early", 6],
+                ["I instinctively think in terms of moats and leverage", 10],
+                ["I refine existing ideas", 3],
+                ["I design differentiation from the outset", 8]
+            ],
+            ["What is your risk tolerance?",
+                ["I take calculated risks when necessary", 6],
+                ["I pursue asymmetric, high-upside opportunities", 10],
+                ["I prefer security and minimal downside", 2],
+                ["I am comfortable with strategic risk", 8]
+            ],
+            ["Risk Preference: Which matters more to you right now?",
+                ["A balance of stability and growth", 5],
+                ["Speed and asymmetric upside", 10],
+                ["Predictability and steady income", 2],
+                ["Growth with controlled downside", 7]
+            ],
+            ["Time Horizon: When do you expect meaningful results?",
+                ["3–7 years", 6],
+                ["10+ years", 10],
+                ["1–3 years", 3],
+                ["7–10 years", 8]
+            ],
+            ["Do you have a global mindset?",
+                ["I design businesses to scale globally from inception", 10],
+                ["I focus mainly on my local market", 2],
+                ["I think internationally from early stages", 8],
+                ["I consider regional expansion", 5]
+            ],
+            ["Strengths: Where are your strongest?",
+                ["Tech/Product", 8],
+                ["Sales/Marketing", 7],
+                ["Operations/Finance", 6],
+                ["Investing/Deal-maker", 10]
+            ],
+            ["Which best describes your relationship with numbers?",
+                ["I actively model scenarios to guide decisions", 10],
+                ["I rely on others for financial insight", 2],
+                ["I can interpret P&L, balance sheets and cash flow", 8],
+                ["I understand basic reports", 5]
+            ],
+            ["How effective are you at finding and leveraging funding sources?",
+                ["Some exposure", 5],
+                ["Proven track record raising capital", 10],
+                ["Limited experience", 2],
+                ["Strong network and capability", 8]
+            ],
+            ["How effectively can you plan and execute modern marketing tactics such as influencer campaigns, retargeting, and AI-driven optimisation?",
+                ["Advanced, data-driven optimisation", 10],
+                ["Moderate practical experience", 6],
+                ["Basic familiarity", 3],
+                ["Strong multi-channel execution", 8]
+            ],
+            ["Before establishing a business, how much thought do you give to optimal tax-efficient and structural setup from the outset?",
+                ["I architect long-term compounding from day one", 10],
+                ["I address it later", 2],
+                ["I plan structure before launch", 8],
+                ["I’m aware but not proactive", 5]
+            ],
+            ["Which change would most likely increase your company’s valuation?",
+                ["Expanding rapidly into new regions", 7],
+                ["Converting customers to recurring revenue", 10],
+                ["Increasing short-term sales", 3],
+                ["Closing larger one-off deals", 5]
+            ],
+            ["Current Position: Tick which best describes you today?",
+                ["Running an early stage business", 6],
+                ["Leading a scaling enterprise", 10],
+                ["Starting from zero", 2],
+                ["Running a profitable business", 8]
+            ],
+            ["Which best describes the people you spend the most time with?",
+                ["Ambitious and growth-oriented peers", 8],
+                ["Mostly non-business peers", 2],
+                ["High-calibre operators and investors", 10],
+                ["Mixed social and business circle", 5]
+            ],
+            ["When you experience failure, how do you typically respond?",
+                ["I learn and try again", 7],
+                ["It significantly discourages me", 2],
+                ["It fuels my determination", 10],
+                ["I recover slowly", 4]
+            ],
+            ["How comfortable are you learning financial fundamentals such as profit, cash flow, and balance sheets?",
+                ["I apply them confidently in decisions", 10],
+                ["I avoid numbers when possible", 2],
+                ["I actively study and improve", 8],
+                ["I understand the basics", 5]
+            ],
+            ["How strong is your willingness to commit serious time and effort to building something meaningful?",
+                ["I will do whatever is required", 10],
+                ["I prefer balance first", 2],
+                ["I am willing to work 6 days consistently", 8],
+                ["I can commit during important phases", 5]
+            ],
+            ["What best describes your current exposure to business building?",
+                ["Small revenue-generating activity", 7],
+                ["None yet", 2],
+                ["I have already launched something serious", 10],
+                ["Side projects only", 4]
+            ]
+        ];
+
+        function processRouting() {
+            const form = document.getElementById('routingForm');
+            if (!form.checkValidity()) {
+                alert("Please complete all personal details and qualifier questions.");
+                return;
+            }
+
+            let earned = 0;
+            let possible = 0;
+
+            for (let idx = 1; idx <= 12; idx++) {
+                const sel = document.querySelector(`input[name="r${idx}"]:checked`);
+                if (sel && sel.value !== "NA") {
+                    earned += parseInt(sel.value);
+                    possible += parseInt(sel.getAttribute('data-max') || 10);
+                }
+            }
+
+            userData = {
+                name: document.getElementById('fullName').value,
+                city: document.getElementById('city').value,
+                age: document.getElementById('age').value,
+                curr: document.getElementById('currOcc').value,
+                prop: document.getElementById('propOcc').value,
+                qEarned: earned,
+                qPossible: possible
+            };
+
+            const perc = possible > 0 ? (earned / possible) * 100 : 0;
+
+            document.getElementById('qualifierPage').classList.add('hidden');
+
+            if (perc >= 70) {
+                startAssessment('Billionaire Track Assessment', billionaireAssessmentData, 260, "billionaire");
+            } else {
+                document.getElementById('failPage').classList.remove('hidden');
+                document.getElementById('failScoreLabel').innerText = `Match: ${Math.round(perc)}% (Qualifier Score: ${earned}/${possible})`;
+            }
+
+            window.scrollTo(0, 0);
+        }
+
+        function startAssessment(title, data, max, tag) {
+            currentTrack = tag;
+            currentMax = max;
+            activeQuestions = data;
+
+            document.getElementById('assessmentPage').classList.remove('hidden');
+            document.getElementById('assessmentTitle').innerText = title;
+            document.getElementById('assessmentCandidateLabel').innerHTML =
+                `Candidate: <strong>${userData.name}</strong> <span class="test-mode-badge">Qualifier: ${userData.qEarned}/${userData.qPossible} (Testing Mode)</span>`;
+
+            let html = "";
+            data.forEach((q, i) => {
+                html += `<div class="question-block"><span class="question-text">${i + 1}. ${q[0]}</span>`;
+                for (let k = 1; k < q.length; k++) {
+                    html += `<label class="option-label"><input type="radio" name="q${i}" value="${q[k][1]}" required> ${q[k][0]}</label>`;
+                }
+                html += `</div>`;
+            });
+
+            document.getElementById('assessmentQuestions').innerHTML = html;
+        }
+
+        function generateFinalReport() {
+            const radios = document.querySelectorAll('#assessmentQuestions input[type="radio"]:checked');
+            if (radios.length < activeQuestions.length) {
+                alert("Please answer all questions.");
+                return;
+            }
+
+            let total = 0;
+            radios.forEach(r => total += parseInt(r.value));
+            const perc = Math.round((total / currentMax) * 100);
+
+            const pillars = [
+                { name: "WHY", score: Math.min(100, perc + 2), desc: "Mindset, goals and purpose around wealth and long-term value creation." },
+                { name: "STRATEGY", score: Math.min(100, perc + 4), desc: "Ability to identify market gaps, recognize patterns, and build moats." },
+                { name: "GRIT", score: Math.max(0, perc - 3), desc: "Performance under pressure and resilience during uncertainty." },
+                { name: "ASSETS & ACCUMULATION", score: perc, desc: "Financial literacy, modeling, and capital allocation efficiency." },
+                { name: "LEVERAGE & TIME", score: Math.min(100, perc + 1), desc: "Marketing tactics and long-term time horizon planning." },
+                { name: "HABITS & ENVIRONMENT", score: Math.max(0, perc - 1), desc: "The quality of your network and commitment to personal growth." }
+            ];
+
+            const comps = ["Elon Musk", "Warren Buffett", "Jeff Bezos", "Ray Dalio", "Sara Blakely", "James Clear"];
+            const quotes = [
+                "Something is possible; then probability will occur.",
+                "Price is what you pay. Value is what you get.",
+                "Your margin is my opportunity.",
+                "Pain + Reflection = Progress.",
+                "Don't be intimidated by what you don't know.",
+                "You fall to the level of your systems."
+            ];
+
+            const today = new Date().toLocaleDateString().replace(/\//g, '-');
+            const fileName = `easySuccess_${currentTrack}_${userData.name.replace(/\s+/g, '_')}_${userData.city.replace(/\s+/g, '_')}_${today}`;
+
+            const win = window.open('', '_blank');
+
+            let pSumHtml = "";
+            pillars.forEach(p => {
+                pSumHtml += `
+                    <div style="display:flex; align-items:center; margin-bottom:25px; page-break-inside:avoid;">
+                        <div style="font-size:3em; font-weight:bold; color:#FF8800; min-width:140px;">${p.score}%</div>
+                        <div style="flex:1; border-left:4px solid #808080; padding-left:25px;">
+                            <div style="font-weight:bold; font-size:1.3em; text-transform:uppercase;">${p.name}</div>
+                            <div style="color:#444; font-size:1em;">${p.desc}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            let pDetailHtml = "";
+            pillars.forEach((p, i) => {
+                pDetailHtml += `
+                    <div style="margin-bottom:40px; page-break-inside:avoid;">
+                        <h3 style="color:#FF8800; border-bottom:2px solid #eee; text-transform:uppercase;">${p.name} Analysis</h3>
+                        <p style="font-style:italic; color:#666; border-left:4px solid #FF8800; padding-left:15px;">"${quotes[i]}"</p>
+                        <p>Your score suggests alignment with ${comps[i]}. Reaching elite levels requires a shift from 'doing' to 'orchestrating capital.' Focus on asymmetric upside.</p>
+                    </div>
+                `;
+            });
+
+            win.document.write(`
+                <html>
+                <head>
+                    <title>${fileName}</title>
+                </head>
+                <body style="font-family:sans-serif; padding:50px; max-width:900px; margin:auto;">
+                    <div style="text-align:center; border-bottom:10px solid #FF8800; padding-bottom:30px; margin-bottom:50px;">
+                        <h1>SUCCESS TRAJECTORY REPORT</h1>
+                        <p style="font-weight:bold; color:gray;">EASYSUCCESS.COM OFFICIAL ASSESSMENT</p>
+                    </div>
+
+                    <div style="background:#f9f9f9; padding:20px; border-radius:8px; border:1px solid #ddd; margin-bottom:50px; display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                        <div><strong>NAME:</strong> ${userData.name.toUpperCase()}</div>
+                        <div><strong>CITY:</strong> ${userData.city.toUpperCase()}</div>
+                        <div><strong>AGE:</strong> ${userData.age}</div>
+                        <div><strong>DATE:</strong> ${today.replace(/-/g, '/')}</div>
+                        <div><strong>CURRENT:</strong> ${userData.curr.toUpperCase()}</div>
+                        <div><strong>PROPOSED:</strong> ${userData.prop.toUpperCase()}</div>
+                    </div>
+
+                    <div style="text-align:center; margin-bottom:60px;">
+                        <div style="font-size:1.4em; color:gray; font-weight:bold;">OVERALL SCORE</div>
+                        <div style="font-size:7em; font-weight:bold; color:#FF8800; line-height:1;">${total}<span style="font-size:0.35em; color:gray;">/${currentMax}</span></div>
+                        <p>Overall Match: ${perc}%</p>
+                    </div>
+
+                    <h2 style="border-bottom:3px solid #000; padding-bottom:10px; margin-bottom:40px; text-transform:uppercase;">Success Pillars</h2>
+                    ${pSumHtml}
+
+                    <div style="page-break-before:always;">
+                        <h2 style="border-bottom:3px solid #000; padding-bottom:10px; margin-bottom:40px; text-transform:uppercase;">Deep Dive</h2>
+                        ${pDetailHtml}
+                    </div>
+
+                    <button onclick="window.print()" style="margin-top:50px; padding:20px; background:#000; color:#fff; width:100%; cursor:pointer; font-weight:bold; text-transform:uppercase; border-radius:6px; border:none;">Download as PDF Report</button>
+                </body>
+                </html>
+            `);
+
+            win.document.close();
+        }
+    </script>
+</body>
+</html>
