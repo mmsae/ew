@@ -27,6 +27,11 @@
         body {
             background-color: #f8f9fa;
         }
+		
+		
+		
+		
+		
     </style>
 </head>
 	
@@ -38,9 +43,11 @@
 	
 <body>
 
+
+
     <!-- Image Container -->
     <div class="container-fluid p-0 main-wrapper">
-        <div class="row g-0"> 
+        <div class="row g-0"> <!-- All slices MUST stay inside this row -->
             
             <!-- Top Nav -->
             <div class="col-12 p-0">
@@ -53,7 +60,6 @@
             <area shape="rect" coords="970,42,1048,66" href="partnerwithus.html">
             <area shape="rect" coords="883,43,967,69" href="whatweoffer.html">
             <area shape="rect" coords="824,42,877,67" href="about.html">
-            <area shape="rect" coords="758,121,932,143" href="#" data-bs-toggle="modal" data-bs-target="#riskPopup">
           </map>
           </div>
 
@@ -96,16 +102,51 @@
                 </map>
             </div>
 			
-            <div class="col-12 p-0"><img src="images/01_home_body_04.jpg" alt="Slice 5"></div>
-            <div class="col-12 p-0"><img src="images/01_home_body_04_3.jpg" alt="Slice 5"></div>	
-            <div class="col-12 p-0"><img src="images/01_home_body_04_2.jpg" alt="Slice 5"></div>				
+			
+	      <!-- Slice 5 -->
+            <div class="col-12 p-0">
+            <img src="images/01_home_body_04.jpg" alt="Slice 5"></div>
+			
+	      <!-- Slice 14 a Day -->
+            <div class="col-12 p-0">
+            <img src="images/01_home_body_04_3.jpg" alt="Slice 5"></div>	
+			
+			
+	      <!-- Slice Calculator -->
+            <div class="col-12 p-0">
+            <img src="images/01_home_body_04_2.jpg" alt="Slice 5"></div>				
+			
 
+          <!-- Slice 7 -->
             <div class="col-12 p-0"></div>
-            <div class="col-12 p-0"><img src="images/00_blank_slice.jpg" alt="Slice 4"></div>
-            <div class="col-12 p-0"><img src="images/01_home_body_07.jpg" alt="Slice 7"></div>
-            <div class="col-12 p-0"><img src="images/00_blank_slice.jpg" alt="Slice 4"></div>
-            <div class="col-12 p-0"><img src="images/01_home_body_06.jpg" alt="Slice 7"></div>
-            <div class="col-12 p-0"><img src="images/00_blank_slice.jpg" alt="Slice 4"></div>			
+			
+
+			<!-- Blank Slice -->
+          <div class="col-12 p-0">
+                <img src="images/00_blank_slice.jpg" alt="Slice 4">
+          </div>
+			
+			
+		  <!-- Slice 9 -->
+            <div class="col-12 p-0">
+            <img src="images/01_home_body_07.jpg" alt="Slice 7"></div>
+			
+			<!-- Blank Slice -->
+          <div class="col-12 p-0">
+                <img src="images/00_blank_slice.jpg" alt="Slice 4">
+          </div>
+			
+			
+		  <!-- Slice 8 -->
+            <div class="col-12 p-0">
+          <img src="images/01_home_body_06.jpg" alt="Slice 7"></div>
+			
+			
+			<!-- Blank Slice -->
+          <div class="col-12 p-0">
+                <img src="images/00_blank_slice.jpg" alt="Slice 4">
+          </div>			
+		
 
             <!-- Slice 10 -->
             <div class="col-12 p-0">
@@ -131,78 +172,61 @@
           </a>
             </div>
 
-        </div> 
-    </div>
+        </div> <!-- End of Row -->
+    </div> <!-- End of Container -->
 
-<!-- COOKIE POPUP (Shows on load, limited to 3 visits) -->
-<div class="modal fade" id="cookiePopup" tabindex="-1" aria-hidden="true">
+    <!-- Bootstrap JS (Optional, for hotspots or interactive parts later) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+	
+	
+	<!-- Register Your Interest Popup -->
+<div class="modal fade" id="designPopup" tabindex="-1" aria-hidden="true">
+  <!-- We removed 'modal-xl' and added 'width: fit-content' so the box snaps to the image size -->
   <div class="modal-dialog modal-dialog-centered" style="max-width: 95%; width: fit-content;">
     <div class="modal-content border-0 bg-transparent">
+      
+      <!-- Close Button -->
       <div class="text-end mb-2">
         <button type="button" class="btn btn-light btn-sm shadow-sm" data-bs-dismiss="modal">Close [X]</button>
       </div>
+
+      <!-- Popup Image Container -->
       <div class="modal-body p-0 text-center">
-        <img src="https://mmsae.github.io/ew/images/09_Popup_Cookies.jpg" 
+        <img src="images/09_Popup_Register.jpg" 
              class="img-fluid shadow-lg" 
-             alt="Cookie Consent" 
+             alt="Popup Content" 
              style="max-height: 85vh; width: auto; display: block; margin: 0 auto; border-radius: 4px;">
       </div>
+
     </div>
   </div>
 </div>
+	
+	
 
-<!-- Register Your Interest Popup -->
-<div class="modal fade" id="designPopup" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" style="max-width: 95%; width: fit-content;">
-    <div class="modal-content border-0 bg-transparent">
-      <div class="text-end mb-2">
-        <button type="button" class="btn btn-light btn-sm shadow-sm" data-bs-dismiss="modal">Close [X]</button>
-      </div>
-      <div class="modal-body p-0 text-center">
-        <img src="images/09_Popup_Register.jpg" class="img-fluid shadow-lg" alt="Popup Content" style="max-height: 85vh; width: auto; display: block; margin: 0 auto; border-radius: 4px;">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Risk Popup -->
+	<!-- Risk Popup -->
 <div class="modal fade" id="riskPopup" tabindex="-1" aria-hidden="true">
+  <!-- We removed 'modal-xl' and added 'width: fit-content' so the box snaps to the image size -->
   <div class="modal-dialog modal-dialog-centered" style="max-width: 95%; width: fit-content;">
     <div class="modal-content border-0 bg-transparent">
+      
+      <!-- Close Button -->
       <div class="text-end mb-2">
         <button type="button" class="btn btn-light btn-sm shadow-sm" data-bs-dismiss="modal">Close [X]</button>
       </div>
+
+      <!-- Popup Image Container -->
       <div class="modal-body p-0 text-center">
-        <img src="images/09_Popup_KeyRisk.jpg" class="img-fluid shadow-lg" alt="Popup Content" style="max-height: 85vh; width: auto; display: block; margin: 0 auto; border-radius: 4px;">
+        <img src="images/Popup - Risks-100.jpg" 
+             class="img-fluid shadow-lg" 
+             alt="Popup Content" 
+             style="max-height: 85vh; width: auto; display: block; margin: 0 auto; border-radius: 4px;">
       </div>
+
     </div>
   </div>
 </div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Logic for Cookie Popup Count -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // 1. Get current count from browser storage (default to 0 if never visited)
-        let visitCount = localStorage.getItem('ew_cookie_visit_count') || 0;
-        
-        // 2. Increment the count
-        visitCount = parseInt(visitCount) + 1;
-        
-        // 3. Save the new count back to storage
-        localStorage.setItem('ew_cookie_visit_count', visitCount);
-
-        // 4. If count is 3 or less, show the popup
-        if (visitCount <= 3) {
-            var cookieModal = new bootstrap.Modal(document.getElementById('cookiePopup'));
-            cookieModal.show();
-        } else {
-            console.log("Cookie popup skipped: User has visited " + visitCount + " times.");
-        }
-    });
-</script>
-
-</body>
+	
+	
 </html>
